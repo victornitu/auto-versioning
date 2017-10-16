@@ -3,7 +3,7 @@ path = require 'path'
 branchName = promisify(require 'git-branch-name')
 updateJson = require 'update-json-file'
 
-inc = (n) -> "#{parserInt(n) + 1}"
+inc = (n) -> "#{parseInt(n) + 1}"
 
 log = (previous, next) ->
   if next is previous
