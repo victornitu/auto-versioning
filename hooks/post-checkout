@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const path = require('path');
+
+const {create} = require('../../tools/version-manager');
+
+console.log('Trigger: Post Checkout');
+
+const rootPath = path.resolve(__dirname, '../..');
+
+create(rootPath);

@@ -1,0 +1,31 @@
+{
+  "name": "auto-versioning",
+  "version": "1.0.0",
+  "description": "Automatic package versioning example",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "node init.js",
+    "postinstall": "coffee -c tools/version-manager.coffee",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "automatic",
+    "npm",
+    "package",
+    "version",
+    "auto",
+    "versioning"
+  ],
+  "author": "Victor René Nitu <nitu.v.r@gmail.com>",
+  "repository": {
+	"type": "git",
+	"url": "https://github.com/victornitu/auto-versioning.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "coffeescript": "^2.0.1",
+    "git-branch-name": "^1.1.0",
+    "simple-git": "^1.80.1",
+    "update-json-file": "^1.1.1"
+  }
+}
