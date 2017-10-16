@@ -1,29 +1,24 @@
 #!/usr/bin/env node
 
-const path = require('path');
+const path     = require('path')
+const Git      = require('simple-git')
+const {update} = require('../../tools/version-manager')
 
-const Git = require('simple-git');
+console.log('Trigger: Pre Push')
 
-const {update} = require('../../tools/version-manager');
-
-console.log('Trigger: Pre Push');
-
-const rootPath = path.resolve(__dirname, '../..');
-
-const git = Git(rootPath);
+const rootPath = path.resolve(__dirname, '../..')
+const git      = Git(rootPath)
 
 function autoUpdateVersion(version) {
-    console.log('Trigger: Auto Update Version');
+    console.log('Trigger: Auto Update Version')
     return new Promise(resolve => {
-        git
-            .add('./*')
-            .commit('Auto Update Version')
-            .addTag(version)
-            .exec(() => {
-                console.log('Done: version automatically updated');
-                resolve();
-            });
+        git.add('./*')
+           .commit('Auto Update Version')
+           .addTag(version)
+           .exec(() => {
+               console.log('Done: version automatically updated')
+               resolve()
+           })
     })
 }
-
-update(rootPath).then(autoUpdateVersion);
+update(rootPath).then(autoUpdateVersion)

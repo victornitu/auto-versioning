@@ -4,8 +4,11 @@
   "description": "Automatic package versioning example",
   "main": "index.js",
   "scripts": {
-    "preinstall": "node init.js",
-    "postinstall": "coffee -c tools/version-manager.coffee",
+    "init": "node init.js",
+    "build": "coffee -c tools/version-manager.coffee",
+    "preinstall": "npm run init",
+    "postinstall": "npm run build",
+    "update": "node update-version.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
