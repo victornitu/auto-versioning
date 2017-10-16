@@ -1,6 +1,6 @@
 {
   "name": "auto-versioning",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0",
   "description": "Automatic package versioning example",
   "main": "index.js",
   "scripts": {
