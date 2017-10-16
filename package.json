@@ -21,8 +21,8 @@
   ],
   "author": "Victor René Nitu <nitu.v.r@gmail.com>",
   "repository": {
-	"type": "git",
-	"url": "https://github.com/victornitu/auto-versioning.git"
+    "type": "git",
+    "url": "https://github.com/victornitu/auto-versioning.git"
   },
   "license": "MIT",
   "devDependencies": {
